@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Car Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #08003c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }   
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="#" class="logo">FuriousCars</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+      <div class="container">
+        <!-- Hero Section -->
+         <div class="image-text">
+        
+         </div>
+         <div class="moving-img">
+          <H2 class="heading-text">Drive Your Dream <br>Car With Us.</H2>
+         </div>
+        <section class="hero">
+          <h2>"Exclusive Models"</h2>
+          <p>
+            Indulge in the ultimate driving experience with our latest car models, where luxury meets performance and innovation. Every detail is crafted to deliver unparalleled comfort, cutting-edge technology, and sleek, modern design. From powerful engines to advanced safety features, our vehicles redefine excellence on the road. Whether you're cruising through the city or embarking on long adventures, these cars provide an unmatched blend of sophistication and reliability. Elevate your journey with the perfect combination of style and substance, tailored for those who demand the very best. Discover the future of driving with a lineup that's as dynamic as it is luxurious.
+          </p>
+          <!-- <a href="#models" class="explore-button">Explore Models</a> -->
+        </section>
+
+        <!-- Featured Cars Section -->
+        <section id="models" class="featured-cars">
+          <div class="car-card">
+            <img src="images/te.jpg" alt="Car Model 1" class="car-image" />
+            <h3>BMW M4 CS</h3>
+            <p>Starting at $45,000</p>
+            <a href="https://www.bmw-m.com/en/all-models/overview-m-and-m-performance/bmw-m4-cs/2024/bmw-m4-cs.html" class="learn-more">Learn More</a>
+          </div>
+          <div class="car-card">
+            <img src="images/to.jpg" alt="Car Model 2" class="car-image" />
+            <h3>BMW M5 CS</h3>
+            <p>Starting at $50,000</p>
+            <a href="https://www.bmw-m.com/en/topics/magazine-article-pool/bmw-m5-cs-2021.html" class="learn-more">Learn More</a>
+          </div>
+          <div class="car-card">
+            <img src="images/8.jpg" alt="Car Model 3" class="car-image" />
+            <h3>Model Z</h3>
+            <p>Starting at $60,000</p>
+            <a href="https://en.wikipedia.org/wiki/Koenigsegg_Jesko" class="learn-more">Learn More</a>
+          </div>
+        </section>
+
+    
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+          <h2>"What Our Customers Love About Us"</h2>
+          <div class="testimonial-list">
+            <blockquote class="testimonial">
+              <img src="images/Fucking shit.jpeg" alt="image" height="200px" width="250px">
+              <p>
+                "Thank you for delivering my Mercedes in perfect condition! I truly appreciate your attention to detail and seamless process throughout. You’ve made the experience smooth and stress-free. Highly grateful for your exceptional service!"
+              </p>
+              <cite>- Alex M.</cite>
+            </blockquote>
+            <blockquote class="testimonial-1">
+              <img src="images/crazy shit.jpeg" alt="image" height="200px" width="250px">
+              <p>
+                Thank you so much for delivering my car in such great condition! I’m really impressed by your professionalism and care throughout the process. You made everything easy and efficient. I truly appreciate your excellent service!"
+                its time!"
+              </p>
+              <cite>- Jamie L.</cite>
+            </blockquote>
+          </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-logo">
+                <h2>HotWheels</h2>
+                <p>Drive the Future</p>
+            </div>
+    
+            <div class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+    
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        
+        <p class="footer-copy">© 2025 LuckyLokesh. All rights reserved.</p>
+    </footer>
+    
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    
+    <script>
+      // JavaScript to swap images on loop end
+document.addEventListener('DOMContentLoaded', function() {
+  const movingImg = document.querySelector('.moving-img');
+  const images = [
+    "images/pexels-julian-largo-622163228-18003063.jpg", 
+    "images/pexels-julian-largo-622163228-17377920.jpg",
+    // "images/pexels-pixabay-358189.jpg",
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg"
+  ];
+
+  let currentImageIndex = 0;
+  const totalImages = images.length;
+
+  movingImg.addEventListener('animationiteration', function() {
+    // Swap the background image after zoom loop ends
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    movingImg.style.backgroundImage = `url("${images[currentImageIndex]}")`;
+  });
+});
+
+    </script>
+  </body>
+</html>
